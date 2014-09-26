@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="demo.GradleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2014-09-23T21:09:19" hostname="CHI1183" time="0.21">
+  <properties/>
+  <testcase name="length of Spock's and his friends' names" classname="demo.GradleTest" time="0.124"/>
+  <testcase name="clone a spec" classname="demo.GradleTest" time="0.081"/>
+  <testcase name="spring beans should not be null" classname="demo.GradleTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
