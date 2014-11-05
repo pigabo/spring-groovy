@@ -27,6 +27,11 @@ class CustomerController {
 		"hello"
 	}
 	
+//	@RequestMapping(value = "/customer/{index}", method = RequestMethod.GET)
+//	Customer customer(@PathVariable("index") Integer index) {
+//		return customerRepo.findAll().get(index)
+//	}	
+	
 	@RequestMapping(value = "/notFound", method = RequestMethod.GET)
 	String notFound() {
 		throw new PatientNotFound()
@@ -38,14 +43,20 @@ class CustomerController {
 	}
 
 	@RequestMapping(value = "/insert", method = RequestMethod.GET)
-	String insert() {
+	Customer insert() {
 		Course math = new Course(name:"Math")
 		courseRepo.save(math)
+		
+		Course science = new Course(name:"Science")
+		courseRepo.save(science)
 
 		def sam = new Customer(firstName:"Sam", lastName:"Tse")
 		sam.courses.add(math)
+		sam.courses.add(science)
 
 		customerRepo.save(sam)
+		
+		return sam
 	}
 
 	@RequestMapping(value = "/findByLastName/{lastName}", method = RequestMethod.GET)

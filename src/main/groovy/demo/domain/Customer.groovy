@@ -17,6 +17,7 @@ class Customer {
 	
 	@Override
 	public String toString() {
-		String.format("Customer[id=$id, firstName='$firstName', lastName='$lastName']")
+		String.format("Customer[id=$id, firstName='$firstName', lastName='$lastName'] <toString>")
 	}
 }
+	
